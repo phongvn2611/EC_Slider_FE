@@ -35,11 +35,16 @@ function App() {
       <div className="container-fluid">
         <div className="col-md-auto pb-5">
           <h4 className="text-success font-weight-bold">Slide Show</h4>
-          <Carousel activeIndex={index} onSelect={handleSelect} Indicators={false} autoplay>
+          <Carousel
+            activeIndex={index}
+            onSelect={handleSelect}
+            Indicators={false}
+            autoplay
+          >
             {singleFiles.map((file, index) => (
               <Carousel.Item>
                 <img
-                  src={`http://localhost:8080/${file.filePath}`}
+                  src={`https://ec18a006imageupload.herokuapp.com/${file.filePath}`}
                   height="500"
                   className="d-block w-100"
                   alt="img"
@@ -55,7 +60,7 @@ function App() {
               <div className="col-6">
                 <div className="card mb-4 border-0 p-0">
                   <img
-                    src={`http://localhost:8080/${file.filePath}`}
+                    src={`https://ec18a006imageupload.herokuapp.com/${file.filePath}`}
                     height="400"
                     className="card-img-top img-responsive"
                     alt="img"

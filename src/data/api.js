@@ -1,19 +1,20 @@
-import axios from 'axios';
+import axios from "axios";
 
-const apiUrl = 'http://localhost:8080/api/';
+const apiUrl = "https://ec18a006imageupload.herokuapp.com/api/";
 
 export const singleFileUpload = async (data, options) => {
-    try {
-        await axios.post(apiUrl + 'singleFile', data, options);
-    } catch (error) {
-        throw error;
-    }
-}
+  try {
+    await axios.post(apiUrl + "singleFile", data, options);
+  } catch (error) {
+    throw error;
+  }
+};
 export const getSingleFiles = async () => {
-    try {
-            const {data} = await axios.get(apiUrl + 'getSingleFiles');
-            return data;
-    } catch (error) {
-        throw error;
-    }
-}
+  try {
+    const { data } = await axios.get(apiUrl + "getSingleFiles");
+    console.log(data);
+    return data;
+  } catch (error) {
+    throw error;
+  }
+};
